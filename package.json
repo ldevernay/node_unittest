@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ldevernay/node_unittest#readme",
   "devDependencies": {
+    "expect": "^1.20.2",
     "mocha": "^3.4.2"
   }
 }
