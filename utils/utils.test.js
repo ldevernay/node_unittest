@@ -17,17 +17,30 @@ it('should expect some values', () => {
   expect(12).toNotBe(11);
 });
 
-it('should be the same array', () => {
-  // All these tests pass :
-  // expect({name:'Bob'}).toNotBe({name:'Bob'});
-  // expect({name:'Bob'}).toEqual({name:'Bob'});
-  // expect([2,3,4]).toInclude(4);
-  // expect([2,3,4]).toExclude(1);
-  expect({
-    name: 'Bob',
-    age: 34,
+it('should verify first and last name are set', () => {
+  let user = {
     location: 'StGo'
-  }).toInclude({
-    age: 34
-  });
+  }
+  let fullName = 'Bob l\'eponge';
+
+  let result = utils.setName(user, fullName);
+  expect(result).toBeA('object');
+  expect(result.firstName).toBeA('string').toBe('Bob');
+  expect(result.lastName).toBeA('string').toBe('l\'eponge');
+
 });
+
+// it('should be the same array', () => {
+//   // All these tests pass :
+//   // expect({name:'Bob'}).toNotBe({name:'Bob'});
+//   // expect({name:'Bob'}).toEqual({name:'Bob'});
+//   // expect([2,3,4]).toInclude(4);
+//   // expect([2,3,4]).toExclude(1);
+//   expect({
+//     name: 'Bob',
+//     age: 34,
+//     location: 'StGo'
+//   }).toInclude({
+//     age: 34
+//   });
+// });
