@@ -25,8 +25,11 @@ it('should verify first and last name are set', () => {
 
   let result = utils.setName(user, fullName);
   expect(result).toBeA('object');
-  expect(result.firstName).toBeA('string').toBe('Bob');
-  expect(result.lastName).toBeA('string').toBe('l\'eponge');
+  expect(result).toInclude({
+    location: 'StGo',
+    firstName: 'Bob',
+    lastName: 'l\'eponge'
+  });
 
 });
 
