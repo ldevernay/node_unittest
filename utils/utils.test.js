@@ -20,6 +20,13 @@ it('should square a number', () => {
   expect(result).toBeA('number').toEqual(121);
 });
 
+it('should async square a number', (done) => {
+  let result = utils.asyncSquare(11, (square) => {
+    expect(square).toBeA('number').toBe(121);
+    done();
+  });
+});
+
 it('should expect some values', () => {
   expect(12).toNotBe(11);
 });
