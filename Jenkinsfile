@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
                 sh 'echo "Check npm version"'
                 sh 'npm --version'
