@@ -1,7 +1,7 @@
 pipeline {
-    agent any
+    agent { docker 'laurentdev/node_unittest' }
     stages {
-        stage('Test') {
+        stage('Build') {
             steps {
                 sh 'echo "Check npm version"'
                 sh 'npm --version'
