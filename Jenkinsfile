@@ -1,7 +1,7 @@
 pipeline {
     agent { docker 'node' }
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'echo "Check npm version"'
                 sh 'npm --version'
