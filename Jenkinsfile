@@ -5,8 +5,8 @@ pipeline {
             steps {
                 sh 'echo "Check npm version"'
                 sh 'npm --version'
-               // sh 'echo "Run tests"'
-               // sh 'npm run test'
+                sh 'echo "Run tests"'
+                sh 'npm run test'
             }
         }
     }
